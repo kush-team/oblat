@@ -1,0 +1,11 @@
+<h1 id="title">Observatorio Electoral Latinoamericano</h1>
+{{#link-to 'index' class="heading-link"}}Home{{/link-to}}
+{{#link-to 'reports' class="heading-link"}}ver todos{{/link-to}}
+
+<div class="container">
+{{outlet}}
+</div>
+
+{{#each model.country as |country|}}
+	{{country-flag country=country selected=model.country}}
+{{/each}}
