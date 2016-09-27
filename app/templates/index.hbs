@@ -1,0 +1,8 @@
+<nav>
+{{#each model.countries as |country|}}
+	{{#link-to 'country' country.id}}
+		<span class="flag-icon flag-icon-{{country.className}}"></span>
+		{{country.className}}
+	{{/link-to}}
+{{/each}}
+</nav>

@@ -1,3 +1,64 @@
-i.flag.brasil:before {
-    background-position: 0px -728px;
+@import 'bower_components/flag-icon-css/css/flag-icon';
+
+
+.flag-icon-argentina {
+    background-image: url(../flags/4x3/ar.svg);
+}
+
+.flag-icon-brasil {
+    background-image: url(../flags/4x3/br.svg);
+}
+
+.flag-icon-bolivia {
+    background-image: url(../flags/4x3/bo.svg);
+}
+
+.flag-icon-peru {
+    background-image: url(../flags/4x3/pe.svg);
+}
+
+.flag-icon-ecuador {
+    background-image: url(../flags/4x3/ec.svg);
+}
+
+.flag-icon-venezuela {
+    background-image: url(../flags/4x3/ve.svg);
+}
+
+.flag-icon-chile {
+    background-image: url(../flags/4x3/cl.svg);
+}
+
+.flag-icon-colombia {
+    background-image: url(../flags/4x3/co.svg);
+}
+
+.flag-icon-uruguay {
+    background-image: url(../flags/4x3/uy.svg);
+}
+
+.flag-icon-paraguay {
+    background-image: url(../flags/4x3/py.svg);
+}
+
+
+nav {
+
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+	a {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 2em;
+	}
+
+	.flag-icon {
+		width: 10em;
+		height: 10em;
+	}
 }
