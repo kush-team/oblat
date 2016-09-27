@@ -2,7 +2,6 @@ import DS from 'ember-data';
 import config from '../config/environment';
 
 export default DS.Model.extend({
-	owner: DS.belongsTo('user', {async: true}),
 	fileName: DS.attr('string'),
 	path: DS.attr('string'),
 	type: DS.attr('string'),

@@ -1,12 +1,11 @@
 import Ember from 'ember';
-import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
-export default Ember.Route.extend(ApplicationRouteMixin, {
-	model: function () {
+export default Ember.Route.extend({
+	model: function (params) {
 		return Ember.RSVP.hash({
-          countries: this.get('store').find('country'),
-          country: null,
-          reports: this.get('store').find('report', { published: true, sort: 'createdAt DESC', limit: 4})
-     	});
-	},
+      		countries: this.get('store').findAll('country'),
+      		country: null,
+            reports: this.get('store').findAll('report', { published: true, sort: 'createdAt DESC', limit: 4})
+ 		});	
+	}
 });

@@ -2,10 +2,22 @@
 {{#link-to 'index' class="heading-link"}}Home{{/link-to}}
 {{#link-to 'reports' class="heading-link"}}ver todos{{/link-to}}
 
+
+<nav>
+
+{{#each model.countries as |country|}}
+	{{#link-to 'country' country.id}}
+		<i class="{{country.className}} flag"></i>
+		
+	{{/link-to}}
+{{/each}}
+
+
+					
+
+
+</nav>
+
 <div class="container">
 {{outlet}}
 </div>
-
-{{#each model.country as |country|}}
-	{{country-flag country=country selected=model.country}}
-{{/each}}

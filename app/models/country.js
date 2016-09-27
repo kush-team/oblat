@@ -22,6 +22,14 @@ export default DS.Model.extend({
 		}
 	}),
 
+	componentName: Ember.computed('name', function () {
+		if (this.get('name')) {
+			return 'pixel-' + this._clearText(this.get('name').toLowerCase());
+		} else {
+			return 'pixel-country';
+		}
+	}),
+
 	properties: Ember.computed('name', 'id', function () {
 		return { name: this.get('name'), id: this.get('id')};
 	}),
